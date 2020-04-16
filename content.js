@@ -1,20 +1,20 @@
-var elements = document.getElementsByTagName('div');
+// var elements = document.getElementsByTagName('div');
 
-for (var i = 0; i < elements.length; i++) {
-    var element = elements[i];
+// for (var i = 0; i < elements.length; i++) {
+//     var element = elements[i];
 
-    for (var j = 0; j < element.childNodes.length; j++) {
-        var node = element.childNodes[j];
+//     for (var j = 0; j < element.childNodes.length; j++) {
+//         var node = element.childNodes[j];
 
-        if (node.nodeType === 3) {
-            var text = node.nodeValue;
-            var replacedText = text.replace(/\b$millenials]\b/gi, 'trillenial');
+//         if (node.nodeType === 3) {
+//             var text = node.nodeValue;
+//             var replacedText = text.replace(/\b$zvzc]\b/gi, 'cvzxc');
 
-            if (replacedText !== text) {
-                element.replaceChild(document.createTextNode(replacedText), node);
-            }
-        }
-    }
-}
+//             if (replacedText !== text) {
+//                 element.replaceChild(document.createTextNode(replacedText), node);
+//             }
+//         }
+//     }
+// }
 
 
