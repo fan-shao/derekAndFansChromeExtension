@@ -26,12 +26,14 @@
         value = value.replace(/Trump/gi, 'Not Obama :/');
         node.nodeValue = value;
     }
+
     
-    let span = document.createElement("span")
-    span.setAttribute('class', 'notObama')
-    span.innerHTML = value
-    span.style.color = 'red';
-    span.parentNode.appendChild(span)
+    
+    // let span = document.createElement("span")
+    // span.setAttribute('class', 'notObama')
+    // span.innerHTML = value
+    // span.style.color = 'red';
+    // span.parentNode.appendChild(span)
     // span.setAttribute('onmouseover', )
 
     let cursorAt = [...document.body.getElementsByTagName('*')];
@@ -52,10 +54,10 @@
 
 
 
-    let e = document.getElementById('notObama');
+    let e = document.getElementById(*);
 
     e.onmouseover = function() {
-    span.innerHTML = "HELLO"
+    span.innerHTML = 
     }
 
     e.onmouseout = function() {

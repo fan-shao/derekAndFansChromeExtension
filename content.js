@@ -1,19 +1,20 @@
-// var elements = document.getElementsByTagName('*');
-// let replaced = "Millenials"
-// for (var i = 0; i < elements.length; i++) {
-//     var element = elements[i];
+var elements = document.getElementsByTagName('div');
 
-//     for (var j = 0; j < element.childNodes.length; j++) {
-//         var node = element.childNodes[j];
+for (var i = 0; i < elements.length; i++) {
+    var element = elements[i];
 
-//         if (node.nodeType === 3) {
-//             var text = node.nodeValue;
-//             var replacedText = text.replace(new RegExp('Millenials', 'gi'), 'NOT Obama :(');
+    for (var j = 0; j < element.childNodes.length; j++) {
+        var node = element.childNodes[j];
 
-//             if (replacedText !== text) {
-//                 element.replaceChild(document.createTextNode(replacedText), node);
-//             }
-//         }
-//     }
-// }
+        if (node.nodeType === 3) {
+            var text = node.nodeValue;
+            var replacedText = text.replace(/\b$millenials]\b/gi, 'trillenial');
+
+            if (replacedText !== text) {
+                element.replaceChild(document.createTextNode(replacedText), node);
+            }
+        }
+    }
+}
+
 
