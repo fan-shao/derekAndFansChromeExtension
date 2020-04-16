@@ -1,9 +1,65 @@
-const header = document.getElementById("grid-title");
-header.parentNode.removeChild(header);
+
+   
+    var elementsInsideBody = [...document.body.getElementsByTagName('*')];
+    // This makes an array of everything inside the body tag
+    
+    document.onload = findAndReplace();
+    
+    //a function that loops through every single item
+    function findAndReplace(){
+      elementsInsideBody.forEach(element =>{
+        element.childNodes.forEach(child =>{
+          if(child.nodeType === 3){
+            replaceText(child);
+
+          }
+        });
+    
+      });
+    }
 
 
-const img = document.querySelector('img')
-const replaceImg = document.createElement('img')
-img.src =" https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Ducks_in_plymouth%2C_massachusetts.jpg/1280px-Ducks_in_plymouth%2C_massachusetts.jpg"
-img.parentNode.removeChild(img)
-img.parentNode.prepend(replaceImg)
+    
+    function replaceText (node) {
+        let value = node.nodeValue;
+        value = value.replace(/Donald Trump/gi, 'Not Obama');
+        value = value.replace(/Trump/gi, 'Not Obama :/');
+        node.nodeValue = value;
+    }
+    
+    let span = document.createElement("span")
+    span.setAttribute('class', 'notObama')
+    span.innerHTML = value
+    span.style.color = 'red';
+    span.parentNode.appendChild(span)
+    // span.setAttribute('onmouseover', )
+
+    let cursorAt = [...document.body.getElementsByTagName('*')];
+    
+    // let gifArray = ['toDeloot/gif/o1.jpg', 'toDeloot/gif/02.jpg']
+   
+//  function cursor(){
+//    for (let i = 0; i < cursorArray.length+1; i++)
+//   cursorAt.style.cursor  = gifArray[i];
+  
+//   if(i === cursorArray.length){
+//     i = 0; 
+//   }
+//    setTimeout(cursor, 50);
+// }
+
+
+
+
+
+    let e = document.getElementById('notObama');
+
+    e.onmouseover = function() {
+    span.innerHTML = "HELLO"
+    }
+
+    e.onmouseout = function() {
+    document.getElementById('popup').style.display = 'none';
+}   
+
+ 

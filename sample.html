@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+      a .hover-img { 
+        position:relative;
+        }
+        a .hover-img span {
+        position:absolute; left:-9999px; top:-9999px; z-index:9999;
+        }
+        a:hover .hover-img span { 
+        top: 20px; 
+        left:0;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="hover-img">
+        I want something to appear over here on mouseover
+        <span><img src="http://placehold.it/150x150" alt="image" height="100" /> </span>
+    </div>
+</body>
+</html>
